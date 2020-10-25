@@ -1,0 +1,42 @@
+{
+  "name": "mean-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/index.js",
+    "dev": "NODE_ENV=development nodemon server/index.js",
+    "project-setup": "npm install",
+    "test": "NODE_ENV=test jest --no-cache --runInBand --coverage",
+    "kill": "fuser -k 5000/tcp",
+    "lint": "eslint server/",
+    "lint-fix": "eslint server/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranasobeid95/mean-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranasobeid95/mean-app/issues"
+  },
+  "homepage": "https://github.com/ranasobeid95/mean-app#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "prettier": "^2.0.2",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.6"
+  }
+}
