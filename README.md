@@ -1,1 +1,1 @@
-# mean-app
+# mern-app
