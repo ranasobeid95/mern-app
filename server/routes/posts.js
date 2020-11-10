@@ -7,13 +7,12 @@ const Post = require('../database/models/Posts');
 // Submits a post
 router.post('/', async (req, res) => {
   const { title, description } = req.body;
-
-  const post = new Post({
-    title,
-    description,
-  });
   try {
-    const savedPost = await post.save();
+    const savedPost = await Post.create({
+      title,
+      description,
+    });
+
     res.json(savedPost);
   } catch (error) {
     res.json({ message: error });
