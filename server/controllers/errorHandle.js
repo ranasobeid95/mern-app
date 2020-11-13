@@ -8,6 +8,6 @@ exports.clientError = (req, res) => {
 exports.serverError = (err, req, res, next) => {
   res.status(500).json({
     StatusCode: '500',
-    data: { message: 'internal server error 500', err },
+    data: { message: 'internal server error 500', err: `${err}` },
   });
 };
