@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const Post = require('../database/models/Posts');
+const Post = require('../database/models/Post');
 
 // Submits a post
 router.post('/', async (req, res) => {
