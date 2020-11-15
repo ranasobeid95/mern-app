@@ -15,4 +15,4 @@ const postSchema = Schema({
   },
 });
 
-module.exports = model('Posts', postSchema);
+module.exports = model('post', postSchema);
