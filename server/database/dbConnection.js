@@ -10,6 +10,10 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   dbURL = process.env.DEV_URI;
 }
-mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(dbURL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
 module.exports = mongoose.connection;
